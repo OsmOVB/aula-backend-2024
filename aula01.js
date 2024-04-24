@@ -16,32 +16,32 @@ console.log(2 + 2)
 console.log(3 * 2)
 console.log(10 / 2)
 console.log(8 - 3)
-console.log(5 % 2)
+console.log(5 % 2) // 1
 console.log(parseInt(5 / 2))
-console.log(3 ** 2)
+console.log(3 ** 2) // 9
 
 console.log("\n\nTabela verdade &&")
-console.log(true && true)
-console.log(true && false)
-console.log(false && true)
-console.log(false && false)
+console.log(true && true) // true
+console.log(true && false) // false
+console.log(false && true) // false
+console.log(false && false) // false
 
 console.log("\n\nTabela verdade ||")
-console.log(true || true)
-console.log(true || false)
-console.log(false || true)
-console.log(false || false)
+console.log(true || true) // true
+console.log(true || false) // true
+console.log(false || true) // true
+console.log(false || false) // false
 
 console.log("\n\nComparações")
-console.log(1 == 1)
-console.log(1 == '1')
-console.log(1 === '1')
-console.log(1 === 1)
-console.log(1 != 2)
-console.log(1 != '1')
-console.log(1 !== '1')
-console.log(1 !== 2)
-console.log(1 !== 1)
+console.log(1 == 1) // true
+console.log(1 == '1') // true
+console.log(1 === '1') // false
+console.log(1 === 1) // true
+console.log(1 != 2) // true
+console.log(1 != '1') // false
+console.log(1 !== '1') // true
+console.log(1 !== 2) // true
+console.log(1 !== 1) // false
 console.log(1 < 2)
 console.log(1 <= 1)
 console.log(2 >= 1)
@@ -81,9 +81,9 @@ while (i < 30) {
     i *= 2 // i = i * 2
 }
 
-function soma(a, b = 1) {
+function calc(a, b) {
     return a + b
 }
 
-const result = soma(2)
+const result = calc(2, 1)
 console.log(result)
