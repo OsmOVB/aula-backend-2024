@@ -1,3 +1,4 @@
+
 const soma = function (a, b) {
     return a + b
 }
@@ -10,6 +11,9 @@ const sub = (a, b) => {
 
 console.log(sub(5, 3))
 
+// const ehPar = (n) => {
+//     return n % 2 === 0
+// }
 const ehPar = (n) => n % 2 === 0
 
 const quadrado = (n) => n ** 2
@@ -45,8 +49,9 @@ notas.push(9)
 console.log(notas)
 notas.pop()
 notas.pop()
-notas.pop()
+const element = notas.pop()
 
+console.log("-->", element)
 console.log(notas)
 
 
@@ -155,5 +160,4 @@ console.log(aluno["nome"])
 const getKeyValue = (obj, key) => obj[key]
 
 console.log(getKeyValue(aluno, "nome"))
-
 
