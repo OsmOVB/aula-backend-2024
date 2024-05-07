@@ -1,26 +1,16 @@
 const express = require("express")
+const { router } = require("./routes/movies")
+
 const server = express()
+server.use(express.json())
 
-// http://127.0.0.1:8080 ou http://localhost:8080
-server.get("/", (req, res) => {
-    res.send("hello world")
-})
-
-server.get("/user/:id", (req, res) => {
+server.get("/health", (req, res) => {
     res.json({
-        id: req.params.id,
-        name: "Igor",
-        email: "igor@test.com",
+        status: "Running"
     })
 })
 
-// http://localhost:8080/user
-server.get("/user", (req, res) => {
-    res.json({
-        name: "Igor",
-        email: "igor@test.com",
-    })
-})
+server.use("/api", router)
 
 const port = 8080
 server.listen(port, () => {
